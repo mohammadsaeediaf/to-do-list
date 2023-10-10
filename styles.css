@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --primaryColor: #6d28d9;
+  --seccondaryColor: #ede9fc;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--bodyColor);
+  color: var(--mainBlack);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+/* .form-container {
+    background: var(--mainWhite);
+  } */
+
+.form-container form {
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container input {
+  flex: 1;
+}
+
+.form-container input,
+.form-container button {
+  background-color: var(--mainWhite);
+  border: none;
+  outline: none;
+  padding: 0.7rem;
+}
+
+.form-container button {
+  color: var(--primaryColor);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-container button:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+.todolist-container {
+  width: 30rem;
+}
+
+.todo-list {
+  display: flex;
+  padding: 0.5rem;
+  width: 77%;
+  background: var(--seccondaryColor);
+  margin: 0.5rem 0;
+}
+
+.todo-list li {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+
+.todo-list span {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.todo-list .fa-trash-alt {
+  color: var(--mainRed);
+}
+
+.todo-list .fa-check-square {
+  color: var(--primaryColor);
+}
