@@ -6,6 +6,7 @@ const todoListcontainer = document.querySelector(".todolist-container");
 //add EventListener
 
 todoButton.addEventListener("click", addTodo);
+todoListcontainer.addEventListener("click", checkRemove);
 // functions
 function addTodo(e) {
   e.preventDefault();
@@ -19,4 +20,18 @@ function addTodo(e) {
     `;
   todoListcontainer.appendChild(addTododiv);
   todoInput.value = "";
+}
+
+function checkRemove(e) {
+  const classList = [...e.target.classList];
+  // console.log(e.target.classList);
+  // const item = e.target.parentElement.parentElement;
+  if (classList[1] === "fa-check-square") {
+    const checkSquare = e.target.parentElement.parentElement;
+    checkSquare.classList.toggle("completed");
+  } else if (classList[1] === "fa-trash-alt") {
+    const item = e.target.parentElement.parentElement;
+    item.remove();
+    console.log(item);
+  }
 }

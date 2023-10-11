@@ -88,6 +88,7 @@ header {
 
 .todo-list {
   display: flex;
+  transition: all 0.3s;
   padding: 0.5rem;
   width: 77%;
   background: var(--seccondaryColor);
