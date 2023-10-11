@@ -10,7 +10,7 @@ todoListcontainer.addEventListener("click", checkRemove);
 // functions
 function addTodo(e) {
   e.preventDefault();
-  console.log(e);
+  // console.log(e);
   const addTododiv = document.createElement("div");
   addTododiv.classList.add("todo-list");
   addTododiv.innerHTML = `
