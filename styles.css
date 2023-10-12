@@ -120,3 +120,29 @@ header {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
+select {
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 10rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+
+.select {
+  position: relative;
+  font-weight: bold;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: var(--primaryColor);
+  pointer-events: none;
+}
