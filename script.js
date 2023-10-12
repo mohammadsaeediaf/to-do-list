@@ -36,7 +36,3 @@ function checkRemove(e) {
     console.log(item);
   }
 }
-
-function todoFilter(e) {
-  console.log(e.target.value);
-}
