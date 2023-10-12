@@ -144,4 +144,5 @@ select {
   right: 0;
   padding: 1rem;
   color: var(--primaryColor);
+  pointer-events: none;
 }
