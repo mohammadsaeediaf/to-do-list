@@ -53,7 +53,7 @@ header {
   } */
 
 .form-container form {
-  width: 30rem;
+  width: 35rem;
   display: flex;
   justify-content: space-between;
 }
@@ -144,5 +144,4 @@ select {
   right: 0;
   padding: 1rem;
   color: var(--primaryColor);
-  pointer-events: none;
 }

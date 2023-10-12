@@ -2,11 +2,12 @@
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todos-button");
 const todoListcontainer = document.querySelector(".todolist-container");
-
+const todosFilter = document.querySelector(".todos-filter");
 //add EventListener
 
 todoButton.addEventListener("click", addTodo);
 todoListcontainer.addEventListener("click", checkRemove);
+todosFilter.addEventListener("click", todoFilter);
 // functions
 function addTodo(e) {
   e.preventDefault();
@@ -34,4 +35,8 @@ function checkRemove(e) {
     item.remove();
     console.log(item);
   }
+}
+
+function todoFilter(e) {
+  console.log(e.target.value);
 }
