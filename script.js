@@ -39,4 +39,5 @@ function checkRemove(e) {
 
 function todoFilter(e) {
   console.log(e.target.value);
+  const todos = [...todoListcontainer.childNodes];
 }
