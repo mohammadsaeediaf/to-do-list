@@ -45,6 +45,14 @@ function todoFilter(e) {
       case "All":
         todo.style.display = "flex";
         break;
+      case "Compeleted":
+        console.log(todo.classList.contains("compeleted"));
+        if (todo.classList.contains("compeleted")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
     }
   });
 }
