@@ -53,6 +53,13 @@ function todoFilter(e) {
           todo.style.display = "none";
         }
         break;
+      case "Uncompeleted":
+        if (!todo.classList.contains("compeleted")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
     }
   });
 }
