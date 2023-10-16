@@ -70,6 +70,6 @@ function todoFilter(e) {
 function reset() {
   const todos = [...todoListcontainer.childNodes];
   todos.forEach((todo) => {
-    todo.style.display = "none";
+    todo.remove();
   });
 }
