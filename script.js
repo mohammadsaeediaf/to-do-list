@@ -3,11 +3,14 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todos-button");
 const todoListcontainer = document.querySelector(".todolist-container");
 const todosFilter = document.querySelector(".todos-filter");
+const resetBtn = document.querySelector(".reset-btn");
 //add EventListener
 
 todoButton.addEventListener("click", addTodo);
 todoListcontainer.addEventListener("click", checkRemove);
 todosFilter.addEventListener("click", todoFilter);
+resetBtn.addEventListener("click", reset);
+
 // functions
 function addTodo(e) {
   e.preventDefault();
@@ -37,7 +40,6 @@ function checkRemove(e) {
   }
 }
 function todoFilter(e) {
-  console.log(e.target.value);
   const todos = [...todoListcontainer.childNodes];
   todos.forEach((todo) => {
     switch (e.target.value) {
@@ -60,5 +62,12 @@ function todoFilter(e) {
         }
         break;
     }
+  });
+}
+
+function reset() {
+  const todos = [...todoListcontainer.childNodes];
+  todos.forEach((todo) => {
+    todo.style.display = "none";
   });
 }
