@@ -90,7 +90,7 @@ header {
   display: flex;
   transition: all 0.3s;
   padding: 0.5rem;
-  width: 77%;
+  width: 80%;
   background: var(--seccondaryColor);
   margin: 0.5rem 0;
 }
