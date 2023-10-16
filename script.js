@@ -15,15 +15,19 @@ resetBtn.addEventListener("click", reset);
 function addTodo(e) {
   e.preventDefault();
   // console.log(e);
-  const addTododiv = document.createElement("div");
-  addTododiv.classList.add("todo-list");
-  addTododiv.innerHTML = `
+  if (todoInput.value == "") {
+    alert("Please Enter Your Plan");
+  } else {
+    const addTododiv = document.createElement("div");
+    addTododiv.classList.add("todo-list");
+    addTododiv.innerHTML = `
     <li>${todoInput.value}</li>
     <span> <i class="far fa-check-square"></i></span>
     <span> <i class="far fa-trash-alt"></i></span>
     `;
-  todoListcontainer.appendChild(addTododiv);
-  todoInput.value = "";
+    todoListcontainer.appendChild(addTododiv);
+    todoInput.value = "";
+  }
 }
 
 function checkRemove(e) {
@@ -36,7 +40,6 @@ function checkRemove(e) {
   } else if (classList[1] === "fa-trash-alt") {
     const item = e.target.parentElement.parentElement;
     item.remove();
-    console.log(item);
   }
 }
 function todoFilter(e) {
@@ -47,7 +50,6 @@ function todoFilter(e) {
         todo.style.display = "flex";
         break;
       case "Compeleted":
-        console.log(todo.classList.contains("compeleted"));
         if (todo.classList.contains("compeleted")) {
           todo.style.display = "flex";
         } else {
