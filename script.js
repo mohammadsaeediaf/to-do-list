@@ -29,14 +29,13 @@ function checkRemove(e) {
   // const item = e.target.parentElement.parentElement;
   if (classList[1] === "fa-check-square") {
     const checkSquare = e.target.parentElement.parentElement;
-    checkSquare.classList.toggle("completed");
+    checkSquare.classList.toggle("compeleted");
   } else if (classList[1] === "fa-trash-alt") {
     const item = e.target.parentElement.parentElement;
     item.remove();
     console.log(item);
   }
 }
-
 function todoFilter(e) {
   console.log(e.target.value);
   const todos = [...todoListcontainer.childNodes];
@@ -53,7 +52,7 @@ function todoFilter(e) {
           todo.style.display = "none";
         }
         break;
-      case "Uncompeleted":
+      case "Uncompleted":
         if (!todo.classList.contains("compeleted")) {
           todo.style.display = "flex";
         } else {

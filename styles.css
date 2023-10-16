@@ -116,7 +116,7 @@ header {
   color: var(--primaryColor);
 }
 
-.completed {
+.compeleted {
   text-decoration: line-through;
   opacity: 0.5;
 }
